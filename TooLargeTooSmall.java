@@ -1,9 +1,12 @@
 
 /**
- * Write a description of class TooLargeTooSmall here.
+ * Public class "TooLargeTooSmall" accepts parameters "seed," a given number
+ * for comparison by the "guess" method to a guessed number "g."  The "guess"
+ * method returns "0" if seed and g are equivalent, "1" if g is greater than
+ * seed, and "-1" if g is less than seed.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Dave Kelly
+ * @02/05/20
  */
 public class TooLargeTooSmall {
     private Integer chosenNum;
@@ -17,8 +20,17 @@ public class TooLargeTooSmall {
     }
     
     public Integer guess(Integer g) {
+        if (g == chosenNum) {
+            return 0;
+        } else if (g < chosenNum) {
+            return -1;
+        } else {
+            return 1;
+        }
         
-        return chosenNum;
-
+    
+            
+        
+        
     }
 }
